@@ -116,7 +116,7 @@
 ## 主要依赖模块
 
 - axios: >= 0.18.0 [中文文档](https://segmentfault.com/a/1190000008470355?utm_source=tuicool&utm_medium=referral) [官方文档](https://github.com/axios/axios/blob/master/README.md)
-- react.js: >= 16.12.0 [中文参考文档](https://reactjs.bootcss.com/tutorial/tutorial.html) [英文文档](https://zh-hans.reactjs.org/) 【
+- react.js: >= 16.12.0 [中文参考文档](https://reactjs.bootcss.com/tutorial/tutorial.html) [英文文档](https://zh-hans.reactjs.org/)
 - react-router-dom >= 4.2.2 [中文文档](http://react-guide.github.io/react-router-cn/docs/API.html)
 - webpack >= 4.5.0 [官方文档](https://www.webpackjs.com/)
 - bizCharts >= 3.5.6 [官方文档](https://bizcharts.net/products/bizCharts/docs/start)
