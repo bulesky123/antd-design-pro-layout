@@ -1,0 +1,75 @@
+@import '../../../../assets/css/theme.less';
+@import '../../../../assets/css/mixin.less';
+
+ .login-form {
+   margin-top: 20px*@hd;
+   .mobile-title {
+     font-size: 14px*@hd;
+     font-family: PingFangSC-Regular;
+     font-weight: 400;
+     color:rgba(59,70,100,1);
+     line-height: 20px*@hd;
+     margin-bottom: 9px*@hd;
+   }
+   .login-mobile {
+     border-bottom: 0.5px*@hd solid rgba(235, 235, 235, 1);
+     padding-bottom: 7px*@hd;
+
+     input {
+       height: 22px*@hd;
+       font-size: 16px*@hd;
+       font-family: PingFangSC-Regular;
+       font-weight: 400;
+       color: rgba(59, 70, 100, 1);
+       line-height: 22px*@hd;
+     }
+   }
+   .login-code{
+     margin-top: 29px*@hd;
+     border-bottom: 0.5px*@hd solid rgba(235, 235, 235, 1);
+     padding-bottom: 7px*@hd;
+     overflow: hidden;
+     input{
+      height: 22px*@hd;
+      font-size: 16px*@hd;
+      font-family: PingFangSC-Regular;
+      font-weight: 400;
+      color: rgba(59, 70, 100, 1);
+      line-height: 22px*@hd;
+      width: 60%;
+     }
+     span {
+       float: right;
+       display: inline-block;
+       font-size: 14px*@hd;
+       font-family: PingFangSC-Regular;
+       font-weight: 400;
+       color: rgba(84, 93, 255, 1);
+       line-height: 20px*@hd;
+       height: 20px*@hd;
+       padding-left: 14px*@hd;
+       border-left: 0.5px*@hd solid rgba(235,235,235,1);
+     }
+     i{
+       color: #ccc;
+     }
+   }
+ }
+ .captcha-box{
+  padding: 0px 0px 0px 15px;
+  border: 0.5px solid #CCCCCC;
+  box-sizing: border-box;
+  border-radius: 8px;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  overflow: hidden;
+  justify-content: space-between;
+  input{
+    width: 60%;
+    height: 100%;
+  }
+  img{
+    width: 40%;
+  }
+}
