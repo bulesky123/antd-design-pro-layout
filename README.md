@@ -2,6 +2,8 @@
 
 应用react antd-design spa单例页面模式开发，提供通用的后台管理系统，技术目标为模块化开发、组件懒加载、自动化测试、模拟数据等方案提高开发效率。其中包含`antd-design-pro-layout`、`antd-design`、`less`、`bizCharts`、`react16.12`、`react-router4`、`webpack4` 格式化代码、`Jest.js`单元测试、可提供`预加载`功能。使用`mock`模拟数据方案。
 
+### 接口文档api [接口文档api](./api.md)
+
 ## 目录结构
 
 ```html
