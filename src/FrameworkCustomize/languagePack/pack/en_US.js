@@ -11,7 +11,7 @@ let pack = {
   '简体汉语': 'Chinese',
   'English': 'English',
   '数据管理平台': '数据English',
-  '360金融数据AI中台部-系统工程组': 'English-360金融数据AI中台部-系统工程组',
+  '数据AI中台部-系统工程组': 'English-数据AI中台部-系统工程组',
   '退出登录': 'user out',
   '您好': 'hello'
 }

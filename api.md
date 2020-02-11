@@ -213,7 +213,7 @@ POST
           username: "周飞",
           nickname: "周飞",
           avatar: "\/assets\/img\/avatar.png",
-          email: "yaoyingzhe-jk@360jinrong.net",
+          email: "yaoyingzhe-jk",
           loginfailure: 0,
           logintime: '2020-02-10 10:20:12',
           createtime: '2020-02-10 10:20:12',
