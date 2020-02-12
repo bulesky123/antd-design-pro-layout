@@ -1,10 +1,12 @@
 import React from 'react'
-import { Table, Modal, Button, Tree } from 'antd'
+import moment from 'moment'
+import { Table, Modal, Button, Tree, DatePicker } from 'antd'
 import { history } from 'utils'
 import styles from './index.less'
 
 const { confirm } = Modal
 const { TreeNode } = Tree
+const { RangePicker } = DatePicker
 
 const treeData = [{
   name: '首页',
@@ -101,6 +103,8 @@ export default class Demo extends React.Component {
     checkedKeys: [],
     selectedKeys: [],
   }
+  // eslint-disable-next-line react/sort-comp
+  disabledDate = current => current < moment(new Date('2018/12/15'))
   onExpand = (expandedKeys) => {
     console.log('onExpand', expandedKeys)
     // if not set autoExpandParent to false, if children expanded, parent can not collapse.
@@ -109,17 +113,17 @@ export default class Demo extends React.Component {
       expandedKeys,
       autoExpandParent: false,
     })
-  };
+  }
 
   onCheck = (checkedKeys) => {
     console.log('onCheck', checkedKeys)
     this.setState({ checkedKeys })
-  };
+  }
 
   onSelect = (selectedKeys, info) => {
     console.log('onSelect', info)
     this.setState({ selectedKeys })
-  };
+  }
 
   renderTreeNodes = data =>
     data.map((item) => {
@@ -131,7 +135,7 @@ export default class Demo extends React.Component {
         )
       }
       return <TreeNode key={item.key} {...item} />
-    });
+    })
   render() {
     const showConfirm = () => {
       confirm({
@@ -224,6 +228,9 @@ export default class Demo extends React.Component {
       <div>
         <Button onClick={() => history.push('/home')}>跳转页面啊</Button>
         <div>
+          <RangePicker
+            disabledDate={this.disabledDate}
+          />
           <Tree
             checkable
             onExpand={this.onExpand}

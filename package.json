@@ -10,7 +10,7 @@
     "release": "npm run clear && cross-env NODE_ENV=release webpack --config build/webpack.config.js --hide-modules",
     "clear": "rimraf dist",
     "cache": "npm cache clean -f",
-    "precommit": "eslint --ext .js --ext .jsx src/",
+    "precommit": "eslint --ext .js src/ --ext .jsx src/",
     "build": "npm run clear && webpack --config build/webpack.config.js",
     "preview": "node commands/preview.js"
   },
@@ -67,7 +67,9 @@
     "webpack-merge": "^4.1.2"
   },
   "dependencies": {
+    "@ant-design/icons": "^4.0.0-alpha.19",
     "@ant-design/pro-layout": "^4.10.0",
+    "@ant-design/pro-table": "^2.0.0",
     "@antv/data-set": "^0.10.2",
     "antd": "^3.26.7",
     "axios": "^0.18.0",

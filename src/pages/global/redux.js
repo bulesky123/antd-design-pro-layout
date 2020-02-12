@@ -33,7 +33,7 @@ export const globalUpdate = params => ({
 })
 
 export const getRoutes = ({ username, password }) => async (dispatch) => {
-  const { data } = await login({ username, password })
+  const data = await login({ username, password })
   const { token, routes } = data
   sessionStorage.setItem('token', token)
   dispatch(globalUpdate({
@@ -47,7 +47,7 @@ export const getAuthRoutes = () => async (dispatch) => {
   try {
     const token = Tools.getUserInfo('token')
     if (token) {
-      const { data } = await getRoutesByToken()
+      const data = await getRoutesByToken()
       const { routes } = data
       dispatch(globalUpdate({
         routes,

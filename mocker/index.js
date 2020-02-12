@@ -99,6 +99,7 @@ const proxy = {
     code: 200,
     retMsg: '调用成功',
     data: {
+      token: 'AAA',
       routes: [{
         name: '首页',
         icon: 'smile',
@@ -106,10 +107,6 @@ const proxy = {
         key: '/home',
         exact: true,
         routes: [],
-        children: [],
-        parentKeys: [
-          '/',
-        ],
       }, {
         name: '示例展示',
         icon: 'menu',
@@ -145,7 +142,6 @@ const proxy = {
         hideInMenu: false,
         path: '/auth',
         key: '/auth',
-        exact: true,
         routes: [{
           name: '用户管理',
           path: '/auth/user',
@@ -186,6 +182,29 @@ const proxy = {
           '/',
         ],
       }],
+    },
+  }),
+  'POST /user/getuserlist': Mock.mock({
+    code: 200,
+    retMsg: '调用成功',
+    data: {
+      total: 13, // 总条数
+      'data|13': [
+        {
+          'id|+1': 10,
+          username: '周飞',
+          nickname: '周飞',
+          avatar: '/assets/img/avatar.png',
+          email: 'yaoyingzhe-jk',
+          loginfailure: 0,
+          logintime: '2020-02-10 10:20:12',
+          createtime: '2020-02-10 10:20:12',
+          updatetime: '2020-02-10 10:20:12',
+          status: 'normal',
+          groups: '6',
+          groups_text: 'dsp规则组',
+        },
+      ],
     },
   }),
 }

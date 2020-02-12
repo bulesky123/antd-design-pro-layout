@@ -1,6 +1,6 @@
 # 项目介绍
 
-应用react antd-design spa单例页面模式开发，提供通用的后台管理系统，技术目标为模块化开发、组件懒加载、自动化测试、模拟数据等方案提高开发效率。其中包含`antd-design-pro-layout`、`antd-design`、`less`、`bizCharts`、`react16.12`、`react-router4`、`webpack4` 格式化代码、`Jest.js`单元测试、可提供`预加载`功能。使用`mock`模拟数据方案。
+应用react antd-design spa单例页面模式开发，提供通用的后台管理系统，技术目标为模块化开发、组件懒加载、自动化测试、模拟数据等方案提高开发效率。其中包含`antd-design-pro-layout`、`ant-design/pro-table`、`antd-design`、`less`、`bizCharts`、`react16.12`、`react-router4`、`webpack4` 格式化代码、`Jest.js`单元测试、可提供`预加载`功能。使用`mock`模拟数据方案。
 
 ### 接口文档api [接口文档api](./api.md)
 
@@ -122,6 +122,7 @@
 - bizCharts >= 3.5.6 [官方文档](https://bizcharts.net/products/bizCharts/docs/start)
 - antd >= 3.26.7 [官方文档](https://ant.design/docs/react/introduce-cn)
 - @ant-design/pro-layout >= 4.10.0 [官方文档](https://prolayout.ant.design/)
+- @ant-design/pro-table >= 2.0.0 [官方文档](https://github.com/ant-design/pro-table)
 
 ## 开发说明
 

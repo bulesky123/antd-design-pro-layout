@@ -19,7 +19,7 @@ const instance = axios.create({
 const promiseFun = (method, url, params, resolve, reject) => {
   instance[method](url, params).then(({ data }) => {
     if (data.code === successCode) {
-      resolve({ data: data.data })
+      resolve(data.data)
     } else if (data.code === tokenOverdueCode || data.code === tokenNullCode) {
       const redirect = window.location.hash ? window.location.hash.replace(/[#]/g, '') : ''
       if (redirect !== '/login') {

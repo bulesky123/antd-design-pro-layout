@@ -1,9 +1,15 @@
-import React from 'react'
-import { Table, Modal } from 'antd'
+/* eslint-disable jsx-a11y/anchor-is-valid */
+import React, { useState, useRef } from 'react'
+import { Modal, Divider, Button } from 'antd'
+import { PageHeaderWrapper } from '@ant-design/pro-layout'
+import ProTable from '@ant-design/pro-table'
+import { PlusOutlined } from '@ant-design/icons'
 
 const { confirm } = Modal
 
 export default () => {
+  const [sorter, setSorter] = useState({})
+  const actionRef = useRef()
   const showConfirm = () => {
     confirm({
       title: '提示',
@@ -27,26 +33,41 @@ export default () => {
       title: '父级',
       dataIndex: 'age',
       key: 'age',
-      align: 'center',
     },
     {
       title: '名称',
       dataIndex: 'address',
       key: '1',
-      align: 'center',
     },
     {
       title: '状态',
-      dataIndex: 'address',
+      dataIndex: 'status',
       key: '3',
-      align: 'center',
+      valueEnum: {
+        0: {
+          text: '关闭',
+          status: 'Error',
+        },
+        1: {
+          text: '运行中',
+          status: 'Processing',
+        },
+        2: {
+          text: '成功',
+          status: 'Success',
+        },
+        3: {
+          text: '运行中',
+          status: 'Processing',
+        },
+      },
     },
     {
       title: '操作',
       key: 'operation',
-      width: 200,
-      align: 'center',
-      render: () => <div><a href=" " onClick={showConfirm}>编辑</a><a href=" " onClick={showConfirm}>删除</a></div>,
+      dataIndex: 'option',
+      valueType: 'option',
+      render: () => <div><a onClick={showConfirm}>编辑</a><Divider type="vertical" /><a onClick={showConfirm}>删除</a></div>,
     },
   ]
   const data = []
@@ -56,11 +77,30 @@ export default () => {
       name: `Edrward ${i}`,
       age: 32,
       address: `London Park no. ${i}`,
+      status: Math.random() > 0.5 ? 1 : 2,
     })
   }
   return (
-    <div>
-      <Table columns={columns} dataSource={data} bordered />
-    </div>
+    <PageHeaderWrapper>
+      <ProTable
+        headerTitle="角色管理"
+        rowKey="key"
+        actionRef={actionRef}
+        onChange={(_, _filter, _sorter) => {
+          setSorter(`${_sorter.field}_${_sorter.order}`)
+        }}
+        params={{
+          sorter,
+        }}
+        columns={columns}
+        dataSource={data}
+        rowSelection={{}}
+        toolBarRender={() => [
+          <Button type="primary" onClick={showConfirm}>
+            <PlusOutlined /> 新建
+          </Button>,
+        ]}
+      />
+    </PageHeaderWrapper>
   )
 }
