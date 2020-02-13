@@ -69,6 +69,7 @@ export default () => {
       title: '开关',
       dataIndex: 'checked',
       key: '4',
+      hideInSearch: true,
       render: (val) => {
         if (val === 1) {
           return <Switch size="small" checkedChildren="开" unCheckedChildren="关" defaultChecked />

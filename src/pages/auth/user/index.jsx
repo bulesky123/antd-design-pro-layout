@@ -65,6 +65,7 @@ export default () => {
       title: '最后登录时间',
       dataIndex: 'logintime',
       key: 'logintime',
+      valueType: 'dateTime',
     },
     {
       title: '操作',

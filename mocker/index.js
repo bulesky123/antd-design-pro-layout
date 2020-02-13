@@ -192,6 +192,7 @@ const proxy = {
       'data|13': [
         {
           'id|+1': 10,
+          'key|+1': 0,
           username: '周飞',
           nickname: '周飞',
           avatar: '/assets/img/avatar.png',

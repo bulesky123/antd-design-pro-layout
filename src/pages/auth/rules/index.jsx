@@ -94,7 +94,7 @@ export default () => {
         }}
         columns={columns}
         dataSource={data}
-        rowSelection={{}}
+        // rowSelection={{}}
         toolBarRender={() => [
           <Button type="primary" onClick={showConfirm}>
             <PlusOutlined /> 新建
