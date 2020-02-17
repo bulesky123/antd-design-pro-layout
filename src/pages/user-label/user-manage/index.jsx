@@ -4,6 +4,7 @@ import { Modal, Divider, Button } from 'antd'
 import { PageHeaderWrapper } from '@ant-design/pro-layout'
 import ProTable from '@ant-design/pro-table'
 import { PlusOutlined } from '@ant-design/icons'
+import { history } from 'utils'
 import { CreateForm } from './components'
 import { getUserList, addUser } from './api'
 
@@ -31,54 +32,59 @@ export default () => {
   }
   const columns = [
     {
-      title: 'ID',
+      title: '人群编号',
       width: 100,
       dataIndex: 'id',
       key: 'id',
     },
     {
-      title: '用户名',
+      title: '人群名称',
       dataIndex: 'username',
       key: 'username',
-      sorter: true,
     },
     {
-      title: '所属组别',
+      title: '人群数量',
       dataIndex: 'groups_text',
       key: 'groups_text',
+      hideInSearch: true,
     },
     {
-      title: 'Email',
+      title: '拆分比例',
       dataIndex: 'email',
       key: 'email',
     },
     {
-      title: '状态',
+      title: '人群定向',
       dataIndex: 'status',
-      valueEnum: {
-        normal: {
-          text: '成功',
-          status: 'Success',
-        },
-        hidden: {
-          text: '运行中',
-          status: 'Processing',
-        },
-      },
       key: 'status',
+      hideInSearch: true,
     },
     {
-      title: '最后登录时间',
+      title: '创建时间',
       dataIndex: 'logintime',
       key: 'logintime',
       valueType: 'dateTime',
+      hideInSearch: true,
+    },
+    {
+      title: '数据更新时间',
+      dataIndex: 'logintime',
+      key: 'logintime',
+      valueType: 'dateTime',
+      hideInSearch: true,
+    },
+    {
+      title: '编辑人',
+      dataIndex: 'groups_text',
+      key: 'groups_text',
+      hideInSearch: true,
     },
     {
       title: '操作',
       key: 'operation',
       dataIndex: 'option',
       valueType: 'option',
-      render: (_, record) => <div><a onClick={() => { setUpdateValues({ ...record, Modaltitle: '编辑用户' }); handleModalVisible(true) }}>编辑</a><Divider type="vertical" /><a onClick={() => showConfirm(record)}>删除</a></div>,
+      render: (_, record) => <div><a onClick={() => { setUpdateValues({ ...record, Modaltitle: '编辑用户' }); handleModalVisible(true) }}>人群透视</a><Divider type="vertical" /><a onClick={() => { setUpdateValues({ ...record, Modaltitle: '编辑用户' }); handleModalVisible(true) }}>编辑</a><Divider type="vertical" /><a onClick={() => showConfirm(record)}>删除</a></div>,
     },
   ]
   return (
@@ -95,10 +101,10 @@ export default () => {
           sorter,
         }}
         columns={columns}
-        rowSelection={{}}
+        // rowSelection={{}}
         toolBarRender={() => [
-          <Button type="primary" onClick={() => handleModalVisible(true)}>
-            <PlusOutlined /> 新建
+          <Button type="primary" onClick={() => history.push('/add/label')}>
+            <PlusOutlined /> 新建标签人群
           </Button>,
         ]}
       />

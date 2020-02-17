@@ -9,8 +9,8 @@ export default (props) => {
   const [settings, setSettings] = useState({
     navTheme: 'dark',
     primaryColor: 'daybreak',
-    layout: 'sidemenu',
-    contentWidth: 'Fluid',
+    layout: 'topmenu',
+    contentWidth: 'Fixed',
     fixedHeader: false,
     autoHideHeader: false,
     fixSiderbar: false,
@@ -25,7 +25,7 @@ export default (props) => {
     })
   return (
     <ProLayout
-      title={language['数据管理平台']}
+      title={language['数智平台']}
       defaultSelectedKeys={['1']}
       // headerRender={!showMenu ? false : undefined}
       // menuRender={(_, dom) => (!showMenu ? null : dom)} // 控制菜单是否显示

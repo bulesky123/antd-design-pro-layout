@@ -59,6 +59,24 @@ export default [
     title: '菜单管理',
     layout: false,
   },
+  {
+    path: '/user/manage',
+    import: () => import(/* webpackChunkName: "user/manage" */ '@/pages/user-label/user-manage'),
+    title: '人群管理',
+    layout: false,
+  },
+  {
+    path: '/user/combination',
+    import: () => import(/* webpackChunkName: "user/combination" */ '@/pages/user-label/user-combination'),
+    title: '组合人群',
+    layout: false,
+  },
+  {
+    path: '/add/label',
+    import: () => import(/* webpackChunkName: "add/label" */ '@/pages/user-label/add-label'),
+    title: '新建标签',
+    layout: false,
+  },
 ]
 
 

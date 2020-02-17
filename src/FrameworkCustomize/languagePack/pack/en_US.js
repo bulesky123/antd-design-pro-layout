@@ -10,7 +10,7 @@ let pack = {
   '跳转外站': 'jump outside',
   '简体汉语': 'Chinese',
   'English': 'English',
-  '数据管理平台': '数据English',
+  '数智平台': '数智平台English',
   '数据AI中台部-系统工程组': 'English-数据AI中台部-系统工程组',
   '退出登录': 'user out',
   '您好': 'hello'
